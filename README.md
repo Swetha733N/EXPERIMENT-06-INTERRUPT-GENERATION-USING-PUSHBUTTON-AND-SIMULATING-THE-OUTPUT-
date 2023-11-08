@@ -1,13 +1,21 @@
 # EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT
+
 ### Aim:
+
 To Interface a push button and generate an interrupt , simulate it using an led and simuate it on  proteus 
+
 ### Components required:
+
 STM32 CUBE IDE, Proteus 8 simulator .
+
 ### Theory:
+
 ARM v7 Core supports multiple great features for handling exceptions and interrupts. Which includes the Nested Vectored Interrupt Controller (NVIC).
 
 Micro-Coded Architecture So that interrupt stacking, entry, and exit are done automatically in hardware. Which offloads this work overhead from the CPU
+
 ### Processor Mode
+
 The processor mode can change when exceptions occur. And it can be in one of the following modes:
 Thread Mode: Which is entered on reset.
 Handler Mode: Which is entered on all other exceptions.
@@ -27,7 +35,9 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
 One important thing to note here is that same number pins are connected to line with the same number. All of these then join to form a single line. Additionally, we can not use two pins one one line at the same time. For example out of PA1, PB1, PC1, PD1, PE1, PF1 and PG1 you can only use a single pin out of all these. This is because they are all connected to the same line EXTI1. However you can use PA1 and PA2 at the same time as they are connected with different lines.
 
 Now each of these lines EXTI0-EXTI15 can be used to trigger an interrupt on different modes of the signal : rising edge, falling edge or rising_falling edge.
+
 ## Procedure:
+
  1. click on STM 32 CUBE IDE, the following screen will appear 
  ![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
 
@@ -78,6 +88,7 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 ![image](https://user-images.githubusercontent.com/36288975/233856904-99eb708a-c907-4595-9025-c9dbd89b8879.png)
 
 ## STM 32 CUBE PROGRAM :
+
 ```
 Developed by:SWETHA N
 Register Number:212222110050
